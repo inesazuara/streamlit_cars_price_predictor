@@ -4,8 +4,6 @@ import pickle
 from sklearn.model_selection import train_test_split
 from sklearn import ensemble
 from sklearn.metrics import root_mean_squared_error
-import numpy as np
-
 
 # Loading dataset for training
 def load_data(file_path,sep):
@@ -87,6 +85,9 @@ def load_model(file_name):
 if __name__ == "__main__":
        df_cars = load_data("data/coches_usados_esp.csv",";")
        df_cars_clean = preprocess_data(df_cars)
+       # Saving expected columns
+       with open('models/expected_columns.pkl','wb') as file:
+           pickle.dump(df_cars_clean.columns.tolist(),file)
 
        # Model
        model, X_train, X_test, y_train, y_test = train_model(df_cars_clean)
