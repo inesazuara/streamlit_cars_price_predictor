@@ -58,7 +58,7 @@ pip install -r requirements.txt
 
 ### Usage
 
-If you want to see the deployed version of the app go to: https://app-data-exploration.streamlit.app/
+If you want to see the deployed version of the app go to: https://cars-price-predictor-iah.streamlit.app/
 
 For using the code in your own computer:
 
